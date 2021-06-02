@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portfolio_new/WEB/holder_web.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,9 +27,7 @@ class Layout extends StatelessWidget {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth >= 900) {
-          return Container(
-            child: Text("BIG!!"),
-          );
+          return WebHolder();
         } else {
           return Container();
         }

@@ -11,7 +11,6 @@ class WebHolder extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Background(),
-
           ListView(
             children: [
               ScreenA(),

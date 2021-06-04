@@ -126,15 +126,49 @@ class ScreenA extends StatelessWidget {
   }
 
   Widget whoamI(Size size) {
-    return (size.width > 900)
-        ? Container(
-            child: Text(
-              "Hi",
-              style: TextStyle(
-                fontSize: 50,
-                color: Colors.grey[400],
+    return (size.width > 1200)
+        ? Row(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              RotatedBox(
+                quarterTurns: -1,
+                child: Text(
+                  "I build mobile apps",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    color: Colors.grey[400],
+                  ),
+                ),
               ),
-            ),
+              RotatedBox(
+                quarterTurns: -1,
+                child: Text(
+                  "I design backend systems",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    color: Colors.grey[400],
+                  ),
+                ),
+              ),
+              RotatedBox(
+                quarterTurns: -1,
+                child: Text(
+                  "I deploy stuff",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    color: Colors.grey[400],
+                  ),
+                ),
+              ),
+              RotatedBox(
+                  quarterTurns: -1,
+                  child: Icon(
+                    LineIcons.smilingFace,
+                    size: 30,
+                    color: Colors.grey[400],
+                  )),
+            ],
           )
         : Container();
   }
@@ -200,6 +234,8 @@ class ScreenA extends StatelessWidget {
             child: nameWid(),
           ),
           Container(
+            padding: EdgeInsets.all(30),
+            margin: EdgeInsets.fromLTRB(size.width/6, 0, 0, 90),
             alignment: Alignment.bottomLeft,
             child: whoamI(size),
           ),

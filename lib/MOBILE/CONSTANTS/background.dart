@@ -4,7 +4,7 @@ class Background extends StatelessWidget {
   Widget box(Size size) {
     return Container(
       height: size.height,
-      width: size.width * 0.165,
+      width: size.width * 0.33,
       color: Colors.grey[900]!.withOpacity(0.7),
     );
   }
@@ -23,9 +23,7 @@ class Background extends StatelessWidget {
           box(size),
           box(size),
           box(size),
-          box(size),
-          box(size),
-          box(size),
+          
         ],
       ),
     );

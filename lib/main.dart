@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portfolio_new/MOBILE/mobile_holder.dart';
 import 'package:portfolio_new/WEB/holder_web.dart';
 
 void main() {
@@ -30,7 +31,7 @@ class Layout extends StatelessWidget {
           return WebHolder();
         } else {
           return Scaffold(
-            body:Text("Mobile view"),
+            body:MobileHolder(),
           );
         }
       },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:portfolio_new/WEB/CONSTANTS/export_web_cons.dart';
 
 class MScreenA extends StatelessWidget {
@@ -14,7 +15,7 @@ class MScreenA extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 130,
+            height: 70,
             child: Row(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,14 +28,14 @@ class MScreenA extends StatelessWidget {
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 0,
-                      fontSize: 150),
+                      fontSize: 80),
                 ),
-                solidCircle(Colors.red, 50),
+                solidCircle(Colors.red, 30),
               ],
             ),
           ),
           Container(
-            height: 130,
+            height: 70,
             child: Text(
               "I am",
               overflow: TextOverflow.visible,
@@ -42,11 +43,11 @@ class MScreenA extends StatelessWidget {
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 0,
-                  fontSize: 150),
+                  fontSize: 80),
             ),
           ),
           Container(
-            height: 130,
+            height: 70,
             child: Text(
               "Harman",
               overflow: TextOverflow.visible,
@@ -54,11 +55,57 @@ class MScreenA extends StatelessWidget {
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 0,
-                  fontSize: 150),
+                  fontSize: 80),
             ),
           ),
         ],
       ),
+    );
+  }
+
+  Widget whoamI() {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        RotatedBox(
+          quarterTurns: 0,
+          child: Text(
+            "I build mobile apps",
+            style: GoogleFonts.poppins(
+              fontSize: 14,
+              color: Colors.grey[400],
+            ),
+          ),
+        ),
+        RotatedBox(
+          quarterTurns: 0,
+          child: Text(
+            "I design backend systems",
+            style: GoogleFonts.poppins(
+              fontSize: 14,
+              color: Colors.grey[400],
+            ),
+          ),
+        ),
+        RotatedBox(
+          quarterTurns: 0,
+          child: Text(
+            "I deploy stuff",
+            style: GoogleFonts.poppins(
+              fontSize: 14,
+              color: Colors.grey[400],
+            ),
+          ),
+        ),
+        RotatedBox(
+            quarterTurns: 0,
+            child: Icon(
+              LineIcons.smilingFace,
+              size: 14,
+              color: Colors.grey[400],
+            )),
+      ],
     );
   }
 
@@ -86,9 +133,18 @@ class MScreenA extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            alignment: Alignment.center,
-            child:nameWid()
-          )
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 40),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  nameWid(),
+                  Container(
+                      margin: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                      child: whoamI()),
+                ],
+              ))
         ],
       ),
     );

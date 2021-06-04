@@ -194,23 +194,13 @@ class ScreenA extends StatelessWidget {
               letterSpacing: 1.3,
             ),
           ),
-          Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              Text(
-                "responsive",
-                style: GoogleFonts.poppins(
-                  fontSize: 15,
-                  color: Colors.grey[400],
-                  letterSpacing: 1.3,
-                ),
-              ),
-              Container(
-                child: Divider(
-                  color: Colors.grey[300],
-                ),
-              ),
-            ],
+          Text(
+            "responsive",
+            style: GoogleFonts.poppins(
+              fontSize: 15,
+              color: Colors.grey[400],
+              letterSpacing: 1.3,
+            ),
           ),
         ],
       ),
@@ -235,7 +225,7 @@ class ScreenA extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.all(30),
-            margin: EdgeInsets.fromLTRB(size.width/6, 0, 0, 90),
+            margin: EdgeInsets.fromLTRB(size.width / 6, 0, 0, 90),
             alignment: Alignment.bottomLeft,
             child: whoamI(size),
           ),

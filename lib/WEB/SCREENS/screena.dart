@@ -4,11 +4,11 @@ import 'package:line_icons/line_icons.dart';
 import 'package:portfolio_new/WEB/CONSTANTS/export_web_cons.dart';
 
 class ScreenA extends StatelessWidget {
-  Widget backgroundText() {
+  Widget backgroundText(Size size) {
     return Positioned(
       top: -80,
       left: 0,
-          child: Container(
+      child: Container(
         alignment: Alignment.centerLeft,
         padding: EdgeInsets.all(50),
         child: Column(
@@ -17,14 +17,14 @@ class ScreenA extends StatelessWidget {
           children: [
             Container(
               alignment: Alignment.topLeft,
-              height: 350,
+              height: (size.width >= 1800) ? 400 : 350,
               child: Text(
                 "STU",
                 style: GoogleFonts.poppins(
                     color: Colors.grey[900],
                     fontWeight: FontWeight.w900,
                     letterSpacing: 0,
-                    fontSize: 360),
+                    fontSize: (size.width >= 1800) ? 480 : 360),
                 overflow: TextOverflow.visible,
                 textAlign: TextAlign.start,
 
@@ -33,14 +33,14 @@ class ScreenA extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.topLeft,
-              height: 350,
+              height: (size.width >= 1800) ? 400 : 350,
               child: Text(
                 "DENT",
                 style: GoogleFonts.poppins(
                     color: Colors.grey[900],
                     fontWeight: FontWeight.w900,
                     letterSpacing: 0,
-                    fontSize: 360),
+                    fontSize: (size.width >= 1800) ? 480 : 360),
                 overflow: TextOverflow.visible,
                 textAlign: TextAlign.start,
 
@@ -125,6 +125,20 @@ class ScreenA extends StatelessWidget {
     );
   }
 
+  Widget whoamI(Size size) {
+    return (size.width > 900)
+        ? Container(
+            child: Text(
+              "Hi",
+              style: TextStyle(
+                fontSize: 50,
+                color: Colors.grey[400],
+              ),
+            ),
+          )
+        : Container();
+  }
+
   Widget responsetext() {
     return Container(
       margin: EdgeInsets.fromLTRB(0, 30, 30, 0),
@@ -179,11 +193,15 @@ class ScreenA extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Container(
-            child: backgroundText(),
+            child: backgroundText(size),
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 150),
             child: nameWid(),
+          ),
+          Container(
+            alignment: Alignment.bottomLeft,
+            child: whoamI(size),
           ),
           Container(
             alignment: Alignment.topLeft,
@@ -192,7 +210,7 @@ class ScreenA extends StatelessWidget {
           Container(
             alignment: Alignment.topRight,
             child: responsetext(),
-          )
+          ),
         ],
       ),
     );

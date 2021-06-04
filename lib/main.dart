@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Hi, Whats up?',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
       home: Layout(),
     );
@@ -26,10 +26,12 @@ class Layout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth >= 900) {
+        if (constraints.maxWidth >= 1000) {
           return WebHolder();
         } else {
-          return Container();
+          return Scaffold(
+            body:Text("Mobile view"),
+          );
         }
       },
     );

@@ -220,6 +220,10 @@ class ScreenA extends StatelessWidget {
           Container(
             child: backgroundText(size),
           ),
+          Positioned(top: 200, left: 300, child: hollowCircle(Colors.teal, 50)),
+          Positioned(top: 100, left: 800, child: hollowCircle(Colors.cyan, 40)),
+          Positioned(
+              bottom: 30, left: 600, child: hollowCircle(Colors.blue, 40)),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 150),
             child: nameWid(),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:portfolio_new/MOBILE/CONSTANTS/export_mobile_cons.dart';
 import 'package:portfolio_new/WEB/CONSTANTS/export_web_cons.dart';
 
 class MScreenA extends StatelessWidget {
@@ -133,18 +134,24 @@ class MScreenA extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 40),
-              alignment: Alignment.center,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  nameWid(),
-                  Container(
-                      margin: EdgeInsets.fromLTRB(20, 50, 20, 0),
-                      child: whoamI()),
-                ],
-              ))
+            alignment: Alignment.bottomRight,
+            child: MadeWithMobile(),
+            margin: EdgeInsets.fromLTRB(0, 0, 20, 30),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 40),
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                nameWid(),
+                Container(
+                    margin: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                    child: whoamI()),
+              ],
+            ),
+          )
         ],
       ),
     );

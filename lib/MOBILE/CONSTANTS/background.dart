@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
+  const Background({Key? key}) : super(key: key);
   Widget box(Size size) {
     return Container(
       height: size.height,

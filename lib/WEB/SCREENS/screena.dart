@@ -4,6 +4,7 @@ import 'package:line_icons/line_icons.dart';
 import 'package:portfolio_new/WEB/CONSTANTS/export_web_cons.dart';
 
 class ScreenA extends StatelessWidget {
+  const ScreenA({Key? key}) : super(key: key);
   Widget backgroundText(Size size) {
     return Positioned(
       top: -80,

@@ -14,6 +14,7 @@ class WebHolder extends StatelessWidget {
           ListView(
             children: [
               ScreenA(),
+              ScreenB(),
             ],
           ),
           Container(

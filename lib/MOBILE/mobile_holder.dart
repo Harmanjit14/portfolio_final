@@ -44,6 +44,7 @@ class MobileHolder extends StatelessWidget {
           ListView(
             children: [
               MScreenA(),
+              MScreenB(),
             ],
           ),
         ],

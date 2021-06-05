@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:portfolio_new/MOBILE/mobile_holder.dart';
 import 'package:portfolio_new/WEB/holder_web.dart';
 
@@ -10,7 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       title: 'Hi, Whats up?',
       theme: ThemeData(
         primarySwatch: Colors.grey,

@@ -138,6 +138,30 @@ class MScreenA extends StatelessWidget {
               bottom: 70, left: 50, child: hollowCircle(Colors.teal, 26)),
           Positioned(
               bottom: 40, right: 80, child: hollowCircle(Colors.blue, 23)),
+              Container(
+                padding: EdgeInsets.all(20),
+                alignment: Alignment.topLeft,
+                child: Row(
+          children: [
+            Text(
+              "Finally!, this website is f***ing ",
+              style: GoogleFonts.poppins(
+                fontSize: 10,
+                color: Colors.grey[600],
+                letterSpacing: 1.3,
+              ),
+            ),
+            Text(
+              "responsive",
+              style: GoogleFonts.poppins(
+                fontSize: 10,
+                color: Colors.grey[400],
+                letterSpacing: 1.3,
+              ),
+            ),
+          ],
+        ),
+              ),
           Container(
             alignment: Alignment.bottomRight,
             child: MadeWithMobile(),

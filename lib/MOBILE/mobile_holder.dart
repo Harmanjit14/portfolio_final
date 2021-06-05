@@ -9,35 +9,7 @@ class MobileHolder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.grey[300]),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        title: Row(
-          children: [
-            Text(
-              "Finally!, this website is f***ing ",
-              style: GoogleFonts.poppins(
-                fontSize: 10,
-                color: Colors.grey[600],
-                letterSpacing: 1.3,
-              ),
-            ),
-            Text(
-              "responsive",
-              style: GoogleFonts.poppins(
-                fontSize: 10,
-                color: Colors.grey[400],
-                letterSpacing: 1.3,
-              ),
-            ),
-          ],
-        ),
-      ),
-      drawer: Drawer(
-        
-      ),
+    
       body: Stack(
         children: [
           Background(),

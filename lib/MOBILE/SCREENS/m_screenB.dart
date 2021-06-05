@@ -75,12 +75,12 @@ class MScreenB extends StatelessWidget {
           ),
           Positioned(
             child: hollowCircle(Colors.lightBlueAccent, 23),
-            left: 90,
+            left: 10,
             top: 50,
           ),
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.fromLTRB(20, 50, 20, 20),
+            margin: EdgeInsets.fromLTRB(20, 50, 20, 50),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -88,6 +88,7 @@ class MScreenB extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     bottomTextBold("About", Colors.white, 55),
+                    SizedBox(width:6),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -102,10 +103,9 @@ class MScreenB extends StatelessWidget {
                 SizedBox(
                   width: 80,
                 ),
-                Expanded(
-                    child: Container(
+                Container(
                   child: aboutMe(),
-                )),
+                ),
               ],
             ),
           ),

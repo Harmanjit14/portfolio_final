@@ -16,6 +16,7 @@ class WebHolder extends StatelessWidget {
               ScreenA(),
               ScreenB(),
               ScreenC(),
+              ScreenD(),
             ],
           ),
           Container(

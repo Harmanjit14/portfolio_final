@@ -17,6 +17,8 @@ class MobileHolder extends StatelessWidget {
             children: [
               MScreenA(),
               MScreenB(),
+              MScreenC(),
+              MScreenD(),
             ],
           ),
         ],
